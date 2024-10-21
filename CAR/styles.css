@@ -129,22 +129,22 @@ footer p {
 }
 
 .service-points {
-    display: flex; /* Arrange the service boxes in a horizontal row */
-    justify-content: space-between; /* Space out the service boxes evenly */
+    display: flex; 
+    justify-content: space-between; 
 }
 
 .service-box {
-    flex-basis: 22%; /* Each box takes up about 22% of the container's width */
+    flex-basis: 22%; 
     padding: 15px;
     background-color: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Center text within each service box */
+    text-align: center; 
 }
 
 .service-box h3 {
     font-size: 18px;
     margin-bottom: 10px;
-    color: #007bff; /* Color for the titles */
+    color: #007bff; 
 }
 
 .service-box p {
@@ -168,11 +168,11 @@ footer p {
 
 .trip-points {
     display: flex;
-    justify-content: space-between; /* Horizontally space out the points */
+    justify-content: space-between; 
 }
 
 .trip-point {
-    flex-basis: 22%; /* Each point takes up about 22% of the container's width */
+    flex-basis: 22%; 
     padding: 15px;
     background-color: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -182,7 +182,7 @@ footer p {
 .trip-point h3 {
     font-size: 18px;
     margin-bottom: 10px;
-    color: #007bff; /* Color for the titles */
+    color: #007bff; 
 }
 
 .trip-point p {
@@ -204,13 +204,13 @@ footer p {
 }
 
 .booking-form-container {
-    max-width: 400px; /* Set a maximum width for the form */
-    margin: 0 auto; /* Center the form container */
+    max-width: 400px; 
+    margin: 0 auto; 
     padding: 20px;
-    background-color: #f9f9f9; /* Light background for the form */
-    border: 1px solid #ccc; /* Border around the form */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: #f9f9f9; 
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 .form-group {
@@ -263,24 +263,24 @@ footer p {
 
 .address-points,
 .reviews-points {
-    display: flex; /* Arrange the address or reviews boxes in a horizontal row */
-    justify-content: space-between; /* Space out the boxes evenly */
+    display: flex; 
+    justify-content: space-between;
 }
 
 .address-point,
 .review-point {
-    flex-basis: 22%; /* Each box takes up about 22% of the container's width */
+    flex-basis: 22%;
     padding: 15px;
     background-color: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Center text within each box */
+    text-align: center; 
 }
 
 .address-point h3,
 .review-point h3 {
     font-size: 18px;
     margin-bottom: 10px;
-    color: #007bff; /* Color for the titles */
+    color: #007bff; 
 }
 
 .address-point p,
@@ -290,17 +290,17 @@ footer p {
     color: #555;
 }
 
-/* Horizontal Header for Address and Reviews */
+
 .address-section h2,
 .reviews-section h2 {
     display: flex;
-    justify-content: center; /* Center align the headers */
+    justify-content: center; 
 }
 
-/* Display content inside boxes horizontally */
+
 .address-points,
 .reviews-points {
-    display: flex; /* Use flex to display items in a row */
+    display: flex;
     flex-direction: row; /* Keep items in a row */
     justify-content: space-between; /* Space out the boxes evenly */
 }
