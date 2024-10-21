@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental Service</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="navbar">
+            <img src="logo.jpg" alt="Car Rental Service" class="logo">
+            <ul class="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Cars</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Slideshow Section -->
+    <div class="slideshow-container">
+        <div class="mySlides">
+            <img src="images/slide1.jpg" alt="Slide 1">
+            <div class="text">Slide 1 Description</div>
+        </div>
+        <div class="mySlides">
+            <img src="images/slide2.jpg" alt="Slide 2">
+            <div class="text">Slide 2 Description</div>
+        </div>
+        <div class="mySlides">
+            <img src="images/slide3.jpg" alt="Slide 3">
+            <div class="text">Slide 3 Description</div>
+        </div>
+        <div class="mySlides">
+            <img src="images/slide4.jpg" alt="Slide 4">
+            <div class="text">Slide 4 Description</div>
+        </div>
+        <div class="mySlides">
+            <img src="images/slide5.jpg" alt="Slide 5">
+            <div class="text">Slide 5 Description</div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header>
+
+        <h1>Welcome to Car Rental Service</h1>
+        <p>Rent the best cars at the best prices, with flexible options just for you.</p>
+        <img src="logo.jpg" width="50%">
+    </header>
+    <section class="about-page">
+        <h2>We make sure that your driving is comfortable</h2>
+        <div class="image-box">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam omnis voluptatibus natus doloremque voluptates non quae delectus perspiciatis, minus similique, corrupti doloribus error voluptas eaque. Totam, assumenda. Eius, perferendis quo.</p>
+        </div>
+    
+        <!-- Services Section -->
+        <section class="services">
+            <h2>Our Services</h2>
+            <div class="service-box">
+                <h3>Wide Range of Cars</h3>
+                <p>Choose from economy, luxury, and electric vehicles to suit your needs and preferences.</p>
+            </div>
+            <div class="service-box">
+                <h3>Flexible Rental Options</h3>
+                <p>We offer daily, weekly, and long-term rental plans that provide maximum flexibility.</p>
+            </div>
+            <div class="service-box">
+                <h3>Affordable Prices</h3>
+                <p>Our competitive pricing ensures that you get the best value for your money, no matter your budget.</p>
+            </div>
+            <div class="service-box">
+                <h3>24/7 Customer Support</h3>
+                <p>Our support team is available around the clock to assist you with any queries or issues.</p>
+            </div>
+        </section>
+    </section>
+    
+
+    <!-- Image Description Section -->
+    <section class="image-description">
+        <h2>Our Featured Cars</h2>
+        <div class="image-box">
+            <div class="box">
+                <img src="economy1.jpg" alt="Economy Car">
+                <h3>Economy Car</h3>
+                <p>A budget-friendly option perfect for city driving.</p>
+            </div>
+            <div class="box">
+                <img src="luxury2.jpg" alt="Luxury Car">
+                <h3>Luxury Car</h3>
+                <p>Experience the elegance and comfort of our luxury models.</p>
+            </div>
+            <div class="box">
+                <img src="ev1.jpg" alt="Electric Vehicle">
+                <h3>Electric Vehicle</h3>
+                <p>Go green with our range of electric vehicles.</p>
+            </div>
+            <div class="box">
+                <img src="medium1.jpg" alt="SUV">
+                <h3>SUV</h3>
+                <p>Perfect for family trips and off-road adventures.</p>
+            </div>
+           
+        </div>
+    </section>
+
+    <!-- Car Booking Form -->
+    <section class="booking-form">
+        <h2>Book a Car</h2>
+        <form>
+            <label for="pickup-location">Pick-up Location</label>
+            <input type="text" id="pickup-location" name="pickup-location" required>
+
+            <label for="pickup-date">Pick-up Date</label>
+            <input type="date" id="pickup-date" name="pickup-date" required>
+
+            <label for="return-date">Return Date</label>
+            <input type="date" id="return-date" name="return-date" required>
+
+            <button type="submit">Find Cars</button>
+        </form>
+    </section>
+
+    <!-- Car Listings -->
+    <section class="car-listings">
+        <h2>Available Cars</h2>
+        <div class="car">
+            <img src="economy1.jpg.jpg" alt="Economy Car 1">
+            <h3>Economy Car</h3>
+            <p>$25/day</p>
+            <button>Book Now</button>
+        </div>
+        <div class="car">
+            <img src="luxury2.jpg.jpg" alt="Luxury Car 1">
+            <h3>Luxury Car</h3>
+            <p>$120/day</p>
+            <button>Book Now</button>
+        </div>
+        <div class="car">
+            <img src="ev1.jpg.jpg" alt="Electric Vehicle 1">
+            <h3>Electric Vehicle</h3>
+            <p>$70/day</p>
+            <button>Book Now</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Car Rental Service. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Slideshow functionality
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            const slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex - 1].style.display = "block";  
+            setTimeout(showSlides, 5000); // Change image every 5 seconds
+        }
+    </script>
+</body>
+</html>
