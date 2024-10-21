@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental Service - Home</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9; /* Clean background color */
+            color: #333; /* More subtle text color */
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #333; /* Solid dark color for the navbar */
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            float: left;
+        }
+
+        nav li a {
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        nav li a:hover, nav li a.active {
+            background-color: #007bff;
+        }
+
+        /* Header Section */
+        header {
+            padding: 100px 20px 30px 20px; /* Adjusted padding for smaller header */
+            text-align: center;
+            background-color: #007bff; /* Main brand color for header */
+            color: #fff;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px; /* Reduced size for header */
+        }
+
+        header p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        /* Slideshow (adjusted for full screen width and height) */
+        .slideshow-container {
+            position: relative;
+            width: 100vw; /* Full width of viewport */
+            height: 100vh; /* Full height of viewport */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background-color: #ddd;
+        }
+
+        .slides {
+            display: none;
+            width: 100vw;  /* Full width of viewport */
+            height: 100vh; /* Full height of viewport */
+            object-fit: cover; /* Ensure image covers entire area */
+        }
+
+        /* Fade Animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from { opacity: 0.4; }
+            to { opacity: 1; }
+        }
+
+        /* Dots for Slide Navigation */
+        .dot-container {
+            text-align: center;
+            padding: 10px;
+            background: #f4f4f9;
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active-dot {
+            background-color: #007bff;
+        }
+
+        /* Rental Information Section */
+        .rental-info {
+            text-align: center;
+            margin: 40px auto;
+        }
+
+        .rental-info .line {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .rental-info input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 5px;
+            width: 150px;
+        }
+
+        /* Search Cars Button */
+        .search-car {
+            background-color: #007bff; /* Button color */
+            color: white; /* Text color */
+            border: none; /* No border */
+            padding: 10px 20px; /* Padding for button */
+            cursor: pointer; /* Pointer cursor on hover */
+            border-radius: 5px; /* Rounded corners */
+            font-size: 16px; /* Font size */
+            transition: background-color 0.3s; /* Transition effect */
+        }
+
+        .search-car:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        /* Category Filters */
+        .filters {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .filters button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 3px;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .filters button:hover, .filters button.active {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        /* Car Listings */
+        .car-listing {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 40px auto;
+            max-width: 1200px;
+        }
+
+        .car {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 300px;
+            margin: 10px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, opacity 0.2s;
+        }
+
+        .car:hover {
+            transform: scale(1.05);
+        }
+
+        .car img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .car h2 {
+            font-size: 20px;
+            color: #333;
+        }
+
+        .car p {
+            color: #555;
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        .car button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 3px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .car button:hover {
+            background-color: #218838;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .car-listing {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul {
+                flex-direction: column;
+            }
+            nav li {
+                width: 100%;
+            }
+            nav li a {
+                text-align: left;
+                padding-left: 20px;
+            }
+            header {
+                padding: 100px 20px 30px 20px;
+            }
+            .filters button {
+                width: 100%;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="log-in.html">Log In</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Car Rental Service</h1>
+        <p>Your trusted partner for all your car rental needs.</p>
+    </header>
+
+    <!-- Slideshow Container -->
+    <div class="slideshow-container">
+        <div class="slide fade">
+            <img class="slides" src="images/slideshow1.jpg" alt="Slide 1">
+        </div>
+        <div class="slide fade">
+            <img class="slides" src="images/slideshow2.jpg" alt="Slide 2">
+        </div>
+        <div class="slide fade">
+            <img class="slides" src="images/slideshow3.jpg" alt="Slide 3">
+        </div>
+    </div>
+
+    <!-- Dots for Navigation -->
+    <div class="dot-container">
+        <span class="dot active-dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <section class="rental-info">
+        <div class="line">
+            <input type="date" id="pickup-date" placeholder="Pick-up Date">
+            <input type="text" placeholder="Pick-up Location" id="pickup-location">
+        </div>
+        <div class="line">
+            <input type="date" id="dropoff-date" placeholder="Drop-off Date">
+            <input type="text" placeholder="Drop-off Location" id="dropoff-location">
+        </div>
+        <button class="search-car" onclick="searchCars()">Search Cars</button> <!-- Search Cars Button -->
+    </section>
+
+    <div class="filters">
+        <button onclick="filterCars('all')">All Cars</button>
+        <button onclick="filterCars('Economy')">Economy</button>
+        <button onclick="filterCars('Medium Segment')">Medium Segment</button>
+        <button onclick="filterCars('Luxury')">Luxury</button>
+        <button onclick="filterCars('EV')">Electric Vehicles</button>
+        <button onclick="filterCars('Self Gear')">Self Gear</button>
+    </div>
+
+    <div class="car-listing">
+        <!-- Economy Car -->
+        <div class="car" data-category="Economy">
+            <img src="images/car1.jpg" alt="Economy Car">
+            <h2>Economy Car</h2>
+            <p>Price: $30/day</p>
+            <button>Book Now</button>
+        </div>
+        <!-- Medium Segment Car -->
+        <div class="car" data-category="Medium Segment">
+            <img src="images/car2.jpg" alt="Medium Segment Car">
+            <h2>Medium Segment Car</h2>
+            <p>Price: $50/day</p>
+            <button>Book Now</button>
+        </div>
+        <!-- Luxury Car -->
+        <div class="car" data-category="Luxury">
+            <img src="images/car3.jpg" alt="Luxury Car">
+            <h2>Luxury Car</h2>
+            <p>Price: $120/day</p>
+            <button>Book Now</button>
+        </div>
+        <!-- Electric Vehicle (EV) -->
+        <div class="car" data-category="EV">
+            <img src="images/car4.jpg" alt="Electric Vehicle">
+            <h2>Electric Vehicle</h2>
+            <p>Price: $80/day</p>
+            <button>Book Now</button>
+        </div>
+        <!-- Self Gear Car -->
+        <div class="car" data-category="Self Gear">
+            <img src="images/car5.jpg" alt="Self Gear Car">
+            <h2>Self Gear Car</h2>
+            <p>Price: $70/day</p>
+            <button>Book Now</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Car Rental Service. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1; }
+            if (n < 1) { slideIndex = slides.length; }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active-dot", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active-dot";
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function filterCars(category) {
+            let cars = document.getElementsByClassName('car');
+            for (let i = 0; i < cars.length; i++) {
+                if (category === 'all' || cars[i].getAttribute('data-category') === category) {
+                    cars[i].style.display = 'block';
+                } else {
+                    cars[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
