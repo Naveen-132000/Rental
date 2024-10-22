@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Contact Us</h1>
+        <div class="content">
+            <div class="company-details">
+                <div class="details-box">
+                    <p><strong>Company Name:</strong> ABC Car Rentals</p>
+                    <p><strong><i class="fas fa-phone-alt"></i> Phone Number:</strong> 
+                        <a href="tel:+1234567890">+123-456-7890</a>
+                    </p>
+                    <p><strong><i class="fas fa-envelope"></i> Email:</strong> 
+                        <a href="mailto:info@abccarrentals.com">info@abccarrentals.com</a>
+                    </p>
+                    <p><strong><i class="fas fa-map-marker-alt"></i> Location:</strong> 
+                        <a href="https://goo.gl/maps/abcd123" target="_blank">1234 Street Name, City, Country</a>
+                    </p>
+                    <p><strong><i class="fas fa-clock"></i> Available 24/7</strong></p>
+                    <p><strong><i class="fas fa-headset"></i> Customer Support</strong></p>
+                    <p><strong><i class="fas fa-bullhorn"></i> Get Latest Offers</strong></p>
+                </div>
+            </div>
+
+            <!-- New Heading for Form -->
+            <div class="form-heading">
+                <h2>Use our quick booking form to get in touch with us</h2>
+            </div>
+
+            <div class="form-container">
+                <div class="form-box">
+                    <form method="POST" action="/">
+                        {% with messages = get_flashed_messages(with_categories=true) %}
+                        {% if messages %}
+                        <ul>
+                            {% for category, message in messages %}
+                            <li class="{{ 'flash-message' if category == 'error' else 'success-message' }}">{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                        {% endwith %}
+
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number:</label>
+                            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+
+                            <label for="location">Location:</label>
+                            <input type="text" id="location" name="location" required>
+                        </div>
+
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required minlength="10"></textarea>
+
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
