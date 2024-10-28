@@ -1,0 +1,126 @@
+/* Container styling */
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1872cc;
+}
+
+/* Styling for the form heading */
+.form-heading h2 {
+    text-align: center;
+    font-size: 22px;
+    color: #1872cc;
+    margin-bottom: 30px;
+}
+
+/* General styling */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.company-details, .form-container {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* Apply similar box styling for both details and form */
+.details-box, .form-box {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Company details styling */
+.company-details p {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.company-details a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+/* Form container styling */
+.form-container {
+    width: 100%;
+}
+
+/* Form box styling now similar to details-box */
+.form-box {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Similar to details-box */
+}
+
+/* Form input and textarea styling */
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    margin-right: 10px;
+    flex: 1;
+}
+
+.form-group input {
+    flex: 2;
+    padding: 10px;
+    margin-right: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Smaller message box */
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    height: 50px; /* Reduced height for smaller message box */
+}
+
+/* Submit button styling */
+button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+ul {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.flash-message {
+    color: red;
+}
+
+.success-message {
+    color: green;
+}

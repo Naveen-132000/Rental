@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental Service</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <img src="images/logo.png" alt="Car Rental Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Slideshow -->
+    <div class="slideshow-container">
+        <div class="slide fade">
+            <img src="images/banner.jpg" alt="Car 1">
+        </div>
+        <div class="slide fade">
+            <img src="images/banner-1.jpg" alt="Car 2">
+        </div>
+        <div class="slide fade">
+            <img src="images/banner-2.jpg" alt="Car 3">
+        </div>
+    </div>
+    <br>
+    <div style="text-align: center;">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    
+
+    <!-- Description -->
+    <div class="description">
+        <h2>Welcome to Our Car Rental Service</h2>
+        <p>We provide the best cars for rent, ensuring quality, comfort, and affordability. Explore our range of vehicles and book your ride today!</p>
+    </div>
+
+    <!-- Car Box -->
+    <div class="car-box">
+        <div>
+            <img src="images/range-1.jpg" alt="Sedan">
+            <p class="car-text">Sedan</p>
+        </div>
+        <div>
+            <img src="images/range-2.jpg" alt="SUV">
+            <p class="car-text">SUV</p>
+        </div>
+        <div>
+            <img src="images/range-3.jpg" alt="Convertible">
+            <p class="car-text">Convertible</p>
+        </div>
+        <div>
+            <img src="images/range-4.jpg" alt="Luxury">
+            <p class="car-text">Luxury</p>
+        </div>
+    </div>
+
+    <div class="booking-section">
+        <h2>Book Your Car</h2>
+        <div class="booking-form-container">
+            <form>
+                <div class="form-group">
+                    <label for="car-type">Choose Car Type:</label>
+                    <select id="car-type" name="car-type" required>
+                        <option value="">Select a car</option>
+                        <option value="sedan">Sedan</option>
+                        <option value="suv">SUV</option>
+                        <option value="luxury">Luxury</option>
+                        <option value="van">Van</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="pickup-date">Pickup Date:</label>
+                    <input type="date" id="pickup-date" name="pickup-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="dropoff-date">Dropoff Date:</label>
+                    <input type="date" id="dropoff-date" name="dropoff-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="customer-name">Your Name:</label>
+                    <input type="text" id="customer-name" name="customer-name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="customer-email">Your Email:</label>
+                    <input type="email" id="customer-email" name="customer-email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Book Now</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Needs Section -->
+    <div class="needs">
+        <h2>Why Choose Us?</h2>
+
+            <p>
+                We provide a fleet of high-quality, meticulously maintained vehicles, 
+                paired with exceptional customer service that goes above and beyond.<br>
+                Our flexible rental plans are tailored to meet diverse needs, ensuring, 
+                you enjoy comfort, convenience, and peace of mind throughout your journey.
+            </p>
+    
+        
+        <a href="about.html" class="read-more-button">Read More</a>
+     </div>
+
+    <div class="trip-beautiful">
+        <h2>How We Make Your Trip Beautiful</h2>
+        <div class="trip-points">
+            <div class="trip-point">
+                <h3>Personalized Itineraries</h3>
+                <p>We create tailored itineraries to suit your preferences, ensuring a memorable journey.</p>
+            </div>
+            <div class="trip-point">
+                <h3>24/7 Customer Support</h3>
+                <p>Our dedicated team is always available to assist you with any inquiries or assistance needed.</p>
+            </div>
+            <div class="trip-point">
+                <h3>Comfortable Rides</h3>
+                <p>Enjoy comfortable and spacious vehicles for a relaxing travel experience, no matter the distance.</p>
+            </div>
+            <div class="trip-point">
+                <h3>Affordable Packages</h3>
+                <p>We offer competitive pricing and attractive packages that cater to all budgets, without compromising quality.</p>
+            </div>
+        </div>
+    </div>
+
+    <center>
+        <img src="images/header.png">
+    </center>
+
+    <!-- Services Section -->
+    <div class="services">
+        <h2>Our Services</h2>
+        <div class="service-points">
+            <div class="service-box">
+                <h3>Reliable Car Rentals</h3>
+                <p>We provide a wide range of cars that meet all your transportation needs, whether for personal or business use.</p>
+            </div>
+            <div class="service-box">
+                <h3>Chauffeur-Driven Options</h3>
+                <p>Enjoy the comfort of chauffeur-driven cars, ensuring a stress-free and premium travel experience.</p>
+            </div>
+            <div class="service-box">
+                <h3>Long-Term Leasing</h3>
+                <p>Customized leasing plans for corporate clients and expatriates, offering flexibility and tailored contracts.</p>
+            </div>
+            <div class="service-box">
+                <h3>Luxury Car Rentals</h3>
+                <p>Experience the best in luxury with our fleet of high-end cars, available for special occasions or VIP events.</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="services.html" class="read-more-button">Read More</a>
+        </div>
+    </div>
+
+    <!-- Reviews Section -->
+<div class="reviews-section">
+    <h2>Customer Reviews</h2>
+    <div class="reviews-points">
+        <div class="review-point active">
+            <h3>John Doe</h3>
+            <p>“Excellent service! The car was in great condition.”</p>
+        </div>
+        <div class="review-point">
+            <h3>Jane Smith</h3>
+            <p>“Highly recommend! The booking rates were reasonable.”</p>
+        </div>
+        <div class="review-point">
+            <h3>Mike Johnson</h3>
+            <p>“A fantastic experience from start to finish. Will definitely use again!”</p>
+        </div>
+        <div class="review-point">
+            <h3>Emily Davis</h3>
+            <p>“Top-notch service! The car was clean and well-maintained.”</p>
+        </div>
+    </div>
+</div>
+
+
+    <!-- JavaScript for Reviews Rotation -->
+    <script>
+        let currentReview = 0;
+        const reviews = document.querySelectorAll('.review-point');
+
+        function showNextReview() {
+            reviews[currentReview].classList.remove('active');
+            currentReview = (currentReview + 1) % reviews.length;
+            reviews[currentReview].classList.add('active');
+        }
+
+        setInterval(showNextReview, 5000); // Change review every 5 seconds
+    </script>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>Magnus Copo</h3>
+                <p>"Where Vision Meets Execution"</p>
+                <p>Bangalore, Karnataka</p>
+            </div>
+            <div>
+                <h4>Follow us on</h4>
+                <ul>
+                    <li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4>Let’s Connect!</h4>
+                <p>Connect with Us, build your network, let’s together make great business.</p>
+                <p>Email: marketing@carrentals.com</p>
+                <p>Email: careers@carrentals.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Slideshow -->
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            const slides = document.getElementsByClassName("slide");
+            const dots = document.getElementsByClassName("dot");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }    
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";  
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 5000); // Change image every 5 seconds
+        }
+
+        function currentSlide(n) {
+            slideIndex = n;
+            showSlides();
+        }
+    </script>
+</body>
+</html>
