@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Tours & Travels</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+</head>
+<body>
+
+  <header>
+    <nav>
+        <div class="nav__logo"><a href="{{ url_for('logo') }}">RENTAL</a></div>
+      <ul class="nav__links">
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About Us</a></li>
+        <li><a href="{{ url_for('services') }}">Services</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+      </ul>
+    </nav>
+  
+  </header>
+    <!-- Why Choose Us Section -->
+
+    <div class="why-choose-us">
+        <h2>Why Choose Us</h2>
+        <p>At TourCo, we provide top-notch travel services that cater to your unique needs. With years of experience, a team of dedicated professionals, and partnerships with the best in the industry, we ensure that your journey is seamless, comfortable, and memorable. We focus on offering personalized solutions, competitive pricing, and 24/7 customer support to guarantee the best travel experience possible.</p>
+    </div>
+    <center>
+    <img src="../static/select-3.png">
+  </center>
+    <div class="cards-section">
+        <div class="card">
+            <h2>ABOUT US</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur quasi beatae autem vitae repellat, officiis, recusandae commodi ipsam nam quis qui praesentium doloremque totam esse delectus corporis possimus unde asperiores non quod? Odit, dolore eius maxime quis hic, possimus vel officiis ipsam eligendi iure velit, nesciunt aperiam fugit deleniti ab vero? Earum nisi recusandae, minima totam libero odio doloribus est? Asperiores, labore quod vero voluptates non, dolor earum voluptas neque quidem explicabo vel eligendi distinctio recusandae! Odit alias suscipit non molestias nulla aut dicta omnis asperiores repellendus excepturi debitis ab provident iure voluptatum esse reprehenderit facilis, magni labore voluptates eveniet.</p>
+        </div>
+    </div>
+    <div class="gallery-section">
+        <h2>Gallery</h2>
+        <div class="gallery-container">
+            <img src="../static/range-2.jpg" alt="Image 1" class="gallery-image">
+            <img src="../static/range-1.jpg" alt="Image 2" class="gallery-image">
+            <img src="../static/range-3.jpg" alt="Image 3" class="gallery-image">
+            <img src="../static/range-4.jpg" alt="Image 4" class="gallery-image">
+            <img src="../static/chauffeur.jpg" alt="Image 5" class="gallery-image">
+            <img src="../static/luxury.jpg" alt="Image 6" class="gallery-image">
+        </div>
+    </div>
+    <footer>
+      <div class="footer__container">
+          <div class="footer__section footer__about">
+              <h3>About</h3>
+              <p>Our experienced team is committed to ensuring every ride meets the highest standards.</p>
+          </div>
+          <div class="footer__section footer__quick-links">
+              <h3>Quick Links</h3>
+              <ul>
+                  <li><a href="{{ url_for('home') }}">Home</a></li>
+                  <li><a href="{{ url_for('about') }}">About Us</a></li>
+                  <li><a href="{{ url_for('services') }}">Services</a></li>
+                  <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+              </ul>
+          </div>
+          
+          <div class="footer__section footer__contact">
+              <h3>Let's Connect</h3>
+              <p>Call Us: <a href="tel:123456789">123456789</a></p>
+              <div class="footer__social-icons">
+                  <a href="https://www.facebook.com/yourpage" target="_blank">
+                      <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="https://www.instagram.com/yourpage" target="_blank">
+                      <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="https://wa.me/123456789" target="_blank">
+                      <i class="fab fa-whatsapp"></i>
+                  </a>
+              </div>
+          </div>
+      </div>
+      <div class="footer__bottom">
+          <p>Copyright © 2024 carrentals.com | Powered By Magnus Copo</p>
+      </div>
+  </footer>
+  
+
+</body>
+</html>
