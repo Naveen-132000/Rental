@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../static/about.css">
+</head>
+</head>
+<body>
+    <header>
+        <nav>
+          <div class="nav__logo"><a href="{{ url_for('home') }}">UTL</a></div>
+          <ul class="nav__links">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About Us</a></li>
+            <li><a href="{{ url_for('services') }}">Services</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+        </ul>
+        
+        </nav>
+    </header>
+    <div class="why-choose-us">
+        <h2>Why Choose Us</h2>
+        <p>At Urban Travels & Logistics, we stand out for our commitment to quality, experience, and customer-centric service. With over a decade in the industry, our team is dedicated to ensuring smooth and reliable travel experiences, supported by round-the-clock availability and highly trained staff. We offer a broad range of services, from airport transfers and corporate packages to comprehensive bus bookings, making us a one-stop solution for all travel needs. Our experienced, multilingual chauffeurs are equipped with mobile phones and identified with clear ID information, ensuring safe, accessible, and professional service. Adhering to international standards, all our vehicles are fully insured, equipped with essential safety features, and regularly maintained, prioritizing your comfort and peace of mind.</p>
+    </div>
+    <section class="banner__container">
+        <div class="banner__wrapper">
+          <img src="../static/banner-1.png" alt="banner">
+          <img src="../static/banner-2.png" alt="banner">
+          <img src="../static/banner-3.png" alt="banner">
+          <img src="../static/banner-4.png" alt="banner">
+          <img src="../static/banner-5.png" alt="banner">
+          <img src="../static/banner-6.png" alt="banner">
+          <img src="../static/banner-7.png" alt="banner">
+          <img src="../static/banner-8.png" alt="banner">
+        </div>
+      </section>
+    <div class="cards-section">
+        <div class="card">
+            <center>
+            <h2>ABOUT US</h2>
+        </center>
+        <p>Urban Travels & Logistics is a professionally managed car rental service provider in Bangalore, backed by over a decade of industry experience. Our team, composed of highly trained and dedicated executives, operates around the clock to deliver exceptional customer service and seamless travel experiences. We are renowned for our efficient and dependable car hire services, including airport pickups and drops, hourly packages for corporate executives, and transportation for events like meetings, weddings, and conventions. Offering a comprehensive range of travel solutions, from car rentals to bus bookings, we ensure our customers receive the highest standards of service at competitive prices.</p> 
+    </div>
+    </div>
+    <footer>
+        <div class="footer__container">
+            <div class="footer__section footer__about">
+                <h3>About</h3>
+                <p>Our experienced team is committed to ensuring every ride meets the highest standards.</p>
+            </div>
+            <div class="footer__section footer__quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                  
+                        <li><a href="{{ url_for('home') }}">Home</a></li>
+                        <li><a href="{{ url_for('about') }}">About Us</a></li>
+                        <li><a href="{{ url_for('services') }}">Services</a></li>
+                        <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                    </ul>
+                    
+            </div>
+            <div class="footer__section footer__contact">
+                <h3>Let's Connect</h3>
+                <p>Call Us: <a href="tel:8884570312"></a></p>
+                <a href="tel:8884570312">8884570312</a></p>
+                <a href="tel: 7892154985"> 7892154985</a></p>
+                <div class="footer__social-icons">
+                    <a href="https://www.facebook.com/yourpage" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/yourpage" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/123456789" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>Copyright © 2024 carrentals.com | Powered By Magnus Copo</p>
+        </div>
+    </footer>
+</body>
+</html>
