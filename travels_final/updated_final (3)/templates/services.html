@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/service.css">
+    <link rel="text/javascript" href="../static/script.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+     
+      
+    <title>Tours & Travels</title>
+
+    
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="nav__logo"><a href="{{ url_for('home') }}"><img src="../static/images/utl.avif"></a></div>
+      <ul class="nav__links">
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About Us</a></li>
+        <li><a href="{{ url_for('services') }}">Services</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+    </ul>
+    
+    </nav>
+</header>
+    <section class="section__container" id="about">
+        <h2 class="section__header">WIDE RANGE OF VEHICLES</h2>
+        <div class="search-container">
+            <form class="search-form">
+                <input type="text" id="carSearch" placeholder="Search vehicles..." onkeyup="filterCars()">
+                <button type="button"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+        <div class="range__grid">
+          <div class="range__card">
+            <img src="../static/images/dzire.png" alt="Car">
+            <h2>Swift D'zire</h2>
+            <p>4hr,40km-1200Rs</p>
+            <p>8hrs,80km-2400Rs</p>
+          <p>Extra kms-15Rs</p>
+      <p>Extra hrs-200Rs</p>
+  <p>Night Bata-200Rs</p>
+<p>Outstation Bata-400Rs</p>
+         
+          <center>
+            <a href="{{ url_for('contact') }}" class="book-button">Book Now</a>
+          </center>
+
+          </div>
+<div class="range__card">
+            <img src="../static/images/crysta1.png" alt="Car">
+            <h2>Innova Crysta</h2>
+            <p>4hr,40km-2400Rs</p>
+            <p>8hrs,80km-3500Rs</p>
+          <p>Extra kms-22Rs</p>
+      <p>Extra hrs-300Rs</p>
+  <p>Night Bata-200Rs</p>
+<p>Outstation Bata-400Rs</p>
+<center>
+  <a href="{{ url_for('contact') }}" class="book-button">Book Now</a>
+</center>
+</div>          
+<div class="range__card">
+    <img src="../static/images/hycross1.png" alt="Car">
+    <h2>Innova Hycross</h2>
+    <p>4hr,40km-2800Rs</p>
+    <p>8hrs,80km-4200Rs</p>
+  <p>Extra kms-28Rs</p>
+<p>Extra hrs-400Rs</p>
+<p>Night Bata-200Rs</p>
+<p>Outstation Bata-400Rs</p>
+<center>
+  <a href="{{ url_for('contact') }}" class="book-button">Book Now</a>
+</center>
+</div>
+<div class="range__card">
+    <img src="../static/ttnonac.png" alt="Car">
+    <h2>Tempo Traveller Non A/c</h2>
+    <p>8hrs,80km-4200Rs</p>
+  <p>Extra kms-22Rs</p>
+<p>Extra hrs-350Rs</p>
+<p>Night Bata-500Rs</p>
+<p>Outstation Bata-500Rs</p>
+<center>
+  <a href="{{ url_for('contact') }}" class="book-button">Book Now</a>
+</center>
+</div>
+<div class="range__card">
+    <img src="../static/images/tt1.png" alt="Car">
+    <h2>Tempo Traveller A/c</h2>
+    <p>8hrs,80km-4800Rs</p>
+  <p>Extra kms-22Rs</p>
+<p>Extra hrs-450Rs</p>
+<p>Night Bata-500Rs</p>
+<p>Outstation Bata-500Rs</p>
+<center>
+  <a href="{{ url_for('contact') }}" class="book-button">Book Now</a>
+</center>
+</div>
+<div class="range__card">
+    <img src="../static/images/oldfortuner1.png" alt="Car">
+    <h2>Old Fortuner</h2>
+    <p>8hrs,80km-6000Rs</p>
+  <p>Extra kms-60Rs</p>
+<p>Extra hrs-600Rs</p>
+<p>Night Bata-600Rs</p>
+<p>Outstation Bata-600Rs</p>
+<center>
+  <a href="{{ url_for('contact') }}" class="book-button">Book Now</a>
+</center>
+</div>
+<div class="range__card">
+    <img src="../static/images/newftnr1.png" alt="Car">
+    <h2>New Fortuner</h2>
+    <p>8hrs,80km-7500Rs</p>
+  <p>Extra kms-70Rs</p>
+<p>Extra hrs-750Rs</p>
+<p>Night Bata-600Rs</p>
+<p>Outstation Bata-600Rs</p>
+<center>
+  <a href="{{ url_for('contact') }}" class="book-button">Book Now</a>
+</center>
+</div>
+<div class="range__card">
+    <img src="../static/images/audi.png" alt="Car">
+    <h2>Audi A6</h2>
+    <p>8hrs,80km-9500Rs</p>
+  <p>Extra kms-75Rs</p>
+<p>Extra hrs-950Rs</p>
+<p>Night Bata-1000Rs</p>
+<p>Outstation Bata-1000Rs</p>
+<center>
+  <a href="{{ url_for('contact') }}" class="book-button">Book Now</a>
+</center>
+</div>
+<div class="range__card">
+    <img src="../static/images/bmw-removebg-preview.png" alt="Car">
+    <h2>BMW 5 Series</h2>
+    <p>8hrs,80km-11000Rs</p>
+  <p>Extra kms-95Rs</p>
+<p>Extra hrs-1100Rs</p>
+<p>Night Bata-1000Rs</p>
+<p>Outstation Bata-1000Rs</p>
+<center>
+  <a href="{{ url_for('contact') }}" class="book-button">Book Now</a>
+</center>
+</div>
+<div class="range__card">
+    <img src="../static/images/benz-removebg-preview.png" alt="Car">
+    <h2>Mercedes Benz E Class</h2>
+    <p>8hrs,80km-11000Rs</p>
+  <p>Extra kms-95Rs</p>
+<p>Extra hrs-1100Rs</p>
+<p>Night Bata-1000Rs</p>
+<p>Outstation Bata-1000Rs</p>
+<center>
+  <a href="{{ url_for('contact') }}" class="book-button">Book Now</a>
+</center>
+</div>
+        </div>
+      </section>
+  </section>
+  <section class="section__container" id="about">
+    <h2 class="section__header">Employee TRansport Services</h2>
+    <div class="range__grid">
+      <div class="range__card">
+        <img src="../static/images/etios-removebg-preview.png" alt="Car">
+        <h2>Sedan</h2>
+        <p>0-15km Up&Down 30=750Rs</p>
+        <p>30 To 40 kms= 950 Rs</p>
+      <p>40to 50 Kms =1150Rs</p>
+  <p>50 and above= 1300Rs</p>
+  <center>
+    <a href="{{ url_for('contact') }}" class="book-button">Book Now</a>
+  </center>
+      </div>
+      <div class="range__card">
+        <img src="../static/images/hycross1.png" alt="Car">
+        <h2> SUV Ertiga A/c </h2>
+        <p>0-15km Up&Down 30=1000Rs</p>
+        <p>30 To 40 kms= 1200Rs</p>
+      <p>40to 50 Kms =1400 Rs</p>
+  <p>50 and above= 1600Rs</p>
+  <center>
+    <a href="{{ url_for('contact') }}" class="book-button">Book Now</a>
+  </center>
+
+</div>
+          <div class="range__card">
+            <img src="../static/images/crysta1.png" alt="Car">
+            <h2> Toyota Crysta  </h2>
+            <p>0-15km Up&Down 30=1200Rs</p>
+            <p>30 To 40 kms= 1400Rs</p>
+          <p>40to 50 Kms =1600 Rs</p>
+      <p>50 and above= 1800Rs</p>
+      <center>
+        <a href="{{ url_for('contact') }}" class="book-button">Book Now</a>
+      </center>
+    
+          </div>
+          <div class="range__card">
+            <img src="../static/images/tt1.png" alt="Car">
+            <h2> Tempo traveler </h2>
+            <p>00 TO 15 kms Up and Down 30 Basic 1400Rs</p>
+            <p>30 To 40 kms= 1600Rs</p>
+          <p>40to 50 Kms =1800 Rs</p>
+      <p>50 and above= 2000Rs</p>
+      <center>
+        <a href="{{ url_for('contact') }}" class="book-button">Book Now</a>
+      </center>
+      </div>
+      
+      </div>
+  </section>
+
+<script src="../static/script.js"></script>
+
+  <button class="terms-button" onclick="openModal()">Terms and Conditions</button>
+
+  <div id="termsModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h3>Terms and Conditions</h3>
+      <ul>
+
+          <li>The price is subject to revision in the event of any fuel price hikes.</li>
+
+          <li>The calculation of distance in kilometers and hours is based on the journey from our office to our office.</li>
+
+          <li>Driver allowance (Bata) is applicable for local trips during the hours between 10:00 PM and 6:00 AM.</li>
+
+          <li>Payments will be processed every 15 days, subject to the timely submission of bills.</li>
+
+          <li>Payments must be cleared within 15 days of receiving the bills. Payment shall be made via a cheque drawn in favor of “URBAN TRAVELS AND LOGISTICS.”</li>
+          </ul>
+          <h3>Outstation Trips</h3>
+          <ul>
+          <li>For outstation trips, a minimum charge for 300 kilometers per day will apply at the specified per-kilometer rate. Additionally, driver allowance (Bata) as per the terms above will be applicable. If the trip involves travel between 10:00 PM and 6:00 AM, an additional Bata will be charged.</li>
+
+          <li>The term "day" refers to a single calendar day.</li>
+
+          <li>Interstate permits, toll fees, parking charges, and service taxes will be charged as per actual costs.</li>
+          </ul>
+    </div>
+  </div>
+
+ 
+
+  <section class="section__container" id="about">
+    <h2 class="section__header">CHOOSE FROM OUR FLEET</h2>
+    <div class="range__grid">
+      <div class="range__card">
+        <i class="fas fa-bus vehicle-icon"></i>
+        <h2>Car Rentals</h2>
+        <p>Car rentals provide flexible transportation solutions, allowing customers to choose vehicles based on their travel needs and preferences.</p>
+      </div>
+      <div class="range__card">
+        <i class="fas fa-shuttle-van vehicle-icon"></i>
+        <h2>Tempo Traveller</h2>
+        <p>Tempo Traveller is a spacious and comfortable vehicle designed for group travel, offering ample seating for 9 to 20 passengers.</p>
+      </div>
+      <div class="range__card">
+        <i class="fas fa-bus-alt vehicle-icon"></i>
+        <h2>Employee Transport Services</h2>
+        <p>Employee Transport Services provide businesses with safe, reliable, and cost-effective transportation solutions for their staff, ensuring timely arrivals and departures.</p>
+      </div>
+     
+    </div>
+  </section>
+  
+<footer>
+    <div class="footer__container">
+        <div class="footer__section footer__about">
+            <h3>About</h3>
+            <p>Our experienced team is committed to ensuring every ride meets the highest standards.</p>
+        </div>
+        
+        <div class="footer__section footer__quick-links">
+            <h3>Quick Links</h3>
+            <ul>
+              
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                <li><a href="{{ url_for('services') }}">Services</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                
+            </ul>
+            
+        </div>
+        
+        <div class="footer__section footer__contact">
+            <h3>Let's Connect</h3>
+            <p>Call Us: <a href="tel:8884570312"></a></p>
+            <a href="tel:8884570312">8884570312</a></p>
+            <a href="tel: 7892154985"> 7892154985</a></p>
+            <div class="footer__social-icons">
+                <a href="https://www.facebook.com/yourpage" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/yourpage" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/123456789" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <p>Copyright © 2024 carrentals.com | Powered By Magnus Copo</p>
+    </div>
+</footer>
+
+</body>
+</html>
